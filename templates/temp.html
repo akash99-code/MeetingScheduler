@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" >
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>TimeTable</title>
+</head>
+<body>
+    <div class="container my-5">TimeTable Msc</div>
+    <div class="container my-5">
+    <table class="table">
+        
+        <tbody>
+          {% set hr = ['9:30-10:20','','10:30-11:20','','11:30-12:20','','1:30-2:20','','2:30-3:20','','3:30-4:20','link','pray'] %}
+          <tr>
+            
+          <td>
+            
+          </br>
+            mon
+          </br>
+            tue
+          </br>
+            wed
+          </br>
+            thu
+          </br>
+            fri
+          </br>
+            sat
+          </td>
+          {% for hour in TTdata %}
+              {% if loop.index%2 == 1 and loop.index != 13%}
+              <td>
+                {{hr[loop.index-1]}}
+                </br>
+                
+                {% if hour.mon !='' and hour.mon !=None %}
+                <button onclick='goto("{{TTdata[loop.index].mon}}")'>{{hour.mon}}</button> 
+                {% endif %}
+                </br>
+
+                {% if hour.tue != '' and hour.tue != None %}
+                <button onclick='goto("{{TTdata[loop.index].tue}}")'>{{hour.tue}}</button> 
+                {% endif %}
+                </br>
+
+                {% if hour.wed !='' and hour.wed !=None %}
+                <button onclick='goto("{{TTdata[loop.index].wed}}")'>{{hour.wed}}</button> 
+                {% endif %}
+                </br>
+
+                {% if hour.thu !='' and hour.thu !=None %}
+                <button onclick='goto("{{TTdata[loop.index].thu}}")'>{{hour.thu}}</button> 
+                {% endif %}
+                </br>
+
+                {% if hour.fri !='' and hour.fri !=None %}
+                <button onclick='goto("{{TTdata[loop.index].fri}}")'>{{hour.fri}}</button> 
+                {% endif %}
+                </br>
+
+                {% if hour.sat !='' and hour.sat !=None %}
+                <button onclick='goto("{{TTdata[loop.index].sat}}")'>{{hour.sat}}</button> 
+                {% endif %}
+                </br>
+              </td>
+              {% endif %}
+          
+          {% endfor %}
+        </tr>
+        </tbody>
+      </table>
+    </div>
+      <div class="container my-5">
+        <button onclick='prayer({{TTdata[12]}})'>prayer</button>
+      </div>
+</body>
+</html>

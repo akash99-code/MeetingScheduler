@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable</title>
+    <style>
+        table tr {
+            display: table-cell;
+        }
+        table tr td {
+            display: block;
+        }
+        *{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><h5>d\h</h5></td>
+                <td><div class="card"><div class="card-body"><h5>MON</h5></div></div></td>
+                <td><div class="card"><div class="card-body"><h5>TUE</h5></div></div></td>
+                <td><div class="card"><div class="card-body"><h5>WED</h5></div></div></td>
+                <td><div class="card"><div class="card-body"><h5>THU</h5></div></div></td>
+                <td><div class="card"><div class="card-body"><h5>FRI</h5></div></div></td>
+                <td><div class="card"><div class="card-body"><h5>SAT</h5></div></div></td>
+            </tr>
+          {% for hour in TTdata %}
+          <tr>
+            {% set hr = ['9:30','link','10:30','link','11:30','link','1:30','link','2:30','link','3:30','link','pray'] %}
+            <th>{{hr[loop.index-1]}}</th>
+            <td>
+                <form action='/update/{{hour.sno}}/mon', method="POST">
+                    <input type="text" class="form-control" name='input' value="{{hour.mon}}" placeholder="Enter">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+            <td>
+                <form action='/update/{{hour.sno}}/tue', method="POST">
+                    <input type="text" class="form-control" name='input'  value="{{hour.tue}}" placeholder="Enter">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+            <td>
+                <form action='/update/{{hour.sno}}/wed', method="POST">
+                    <input type="text" class="form-control" name='input'  value="{{hour.wed}}" placeholder="Enter">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+            <td>
+                <form action='/update/{{hour.sno}}/thu', method="POST">
+                    <input type="text" class="form-control" name='input'  value="{{hour.thu}}" placeholder="Enter">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+            <td>
+                <form action='/update/{{hour.sno}}/fri', method="POST">
+                    <input type="text" class="form-control" name='input'  value="{{hour.fri}}" placeholder="Enter">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+            <td>
+                <form action='/update/{{hour.sno}}/sat', method="POST">
+                    <input type="text" class="form-control" name='input'  value="{{hour.sat}}" placeholder="Enter Todo Title">
+                    <button type="submit" class="btn btn-dark">update</button>
+                </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>

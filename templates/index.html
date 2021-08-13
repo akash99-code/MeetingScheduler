@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="{{url_for('static', filename='css/bcaTT.css')}}" rel="stylesheet" media="screen and (min-width: 600px)">
+  <link href="{{url_for('static', filename='css/bcaTT2.css')}}" rel="stylesheet" media="screen and (max-width: 600px)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{{url_for('static', filename='assets/icon3.png')}}" />
+  <title>TimeTable</title>
+</head>
+
+<body>
+  <div id="scene">
+    <div id="bg" class="layer" data-depth="0.1"></div>
+    <div id="particles-js" class="layer" data-depth="0.4"></div>
+
+    <div class="layer" style="width:100%;" data-depth="0.8"> 
+      <div  class="container" >
+        <h2>TimeTable Msc21</h2>
+        <table >
+          {% set hr = ['','9:30-10:20','10:30-11:20','11:30-12:20','1:30-2:20','2:30-3:20','3:30-4:20'] %}
+          <tr>
+            {% for h in hr %}
+            <td>{{h}}</td>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>MON</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].mon !='' and TTdata[i].mon !=None %}
+              <button onclick='goto("{{TTdata[i+1].mon}}")'>{{TTdata[i].mon}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>TUE</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].tue !='' and TTdata[i].tue !=None %}
+              <button onclick='goto("{{TTdata[i+1].tue}}")'>{{TTdata[i].tue}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>WED</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].wed !='' and TTdata[i].wed !=None %}
+              <button onclick='goto("{{TTdata[i+1].wed}}")'>{{TTdata[i].wed}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>THU</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].thu !='' and TTdata[i].thu !=None %}
+              <button onclick='goto("{{TTdata[i+1].thu}}")'>{{TTdata[i].thu}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>FRI</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].fri !='' and TTdata[i].fri !=None %}
+              <button onclick='goto("{{TTdata[i+1].fri}}")'>{{TTdata[i].fri}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+          <tr>
+            <td>SAT</td>
+            {% for i in range(0,TTdata|length -1, 2) %}
+            <th>
+              {% if TTdata[i].sat !='' and TTdata[i].sat !=None %}
+              <button onclick='goto("{{TTdata[i+1].sat}}")'>{{TTdata[i].sat}}</button>
+              {% else %}
+              &nbsp;
+              {% endif %}
+            </th>
+            {% endfor %}
+          </tr>
+
+        </table>
+
+        <div class="wrap" onclick="prayer({{TTdata[12]}})">
+          <img id="pray" src="{{url_for('static', filename='assets/r4.png')}}"/>
+          <img id="pray2" src="{{url_for('static', filename='assets/r3.png')}}" />
+          <div class=sign><span class="prayer">PRAYER</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  <script src="{{url_for('static', filename='js/particles.js')}}"></script>
+  <script src="{{url_for('static', filename='js/app.js')}}"></script>
+  <script src="{{url_for('static', filename='js/parallax.min.js')}}"></script>
+  <script>
+    var scene = document.getElementById("scene");
+    var parallax = new Parallax(scene);
+  </script>
+</body>
+
+</html>
