@@ -77,12 +77,13 @@ body{
     table button{
       font-family: 'Electrolize', sans-serif;
       background-color: rgba(0, 1, 7, 0.788);
-      color: rgb(33, 108, 158);
+      color: rgb(31, 100, 146);
       border-style: ridge;
       border-color: rgba(3, 11, 41, 0.863);
       border-width: 2px;
       border-radius: 13px 0px 2px 0px;
-      width: 99%;
+      min-width: max-content;
+      width:99%;
       text-align: center;
       padding: 6px 5px;
       /**display: inline-block;*/

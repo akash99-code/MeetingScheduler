@@ -74,15 +74,17 @@ table, tr{
   table button{
     font-family: 'Electrolize', sans-serif;
     background-color: rgba(0, 1, 5, 0.685);
-    color: rgb(33, 108, 158);
+    color: rgb(31, 100, 146);
     border-style: ridge;
     border-color: rgba(4, 16, 59, 0.863);
     border-width: 2px;
     border-radius: 13px 0px 2px 0px;
-    width: 97%;
+    min-width: max-content;
+    width: 98%;
     text-align: center;
-    padding: 6px 5px;
-    margin:1px;
+    padding: 6px;
+    margin:2px;
+    
     /**display: inline-block;*/
     font-size: 18px;
     letter-spacing: 2px;
