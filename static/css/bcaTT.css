@@ -46,8 +46,8 @@ h2{
   flex: 1;
   color:rgb(2, 1, 32);
   font-family: 'Rubik', sans-serif;
-  color: #4485be;
-  color:rgb(87, 140, 201);
+  color: #3a72a3;
+  color:rgb(79, 133, 194);
   text-shadow:  0 -1px 5px #003096, 0 -2px 10px #001044, 0 -10px 20px #002e6b, 0 -18px 40px rgb(80, 90, 150),  0 -30px 40px rgb(2, 4, 25);
   letter-spacing: 4px;
 }
@@ -66,7 +66,7 @@ table, tr{
     font-size: 15px;
     font-family: 'Rubik', sans-serif;
     padding:7px;
-    color:rgb(33, 125, 187);
+    color:rgb(27, 104, 155);
     text-shadow: 2px 2px 2px rgb(1, 6, 43); 
     letter-spacing: 1px;
   }
@@ -74,7 +74,7 @@ table, tr{
   table button{
     font-family: 'Electrolize', sans-serif;
     background-color: rgba(0, 1, 5, 0.685);
-    color: rgb(31, 100, 146);
+    color: rgb(34, 109, 158);
     border-style: ridge;
     border-color: rgba(4, 16, 59, 0.863);
     border-width: 2px;
