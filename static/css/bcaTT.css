@@ -73,15 +73,15 @@ table, tr{
 
   table button{
     font-family: 'Electrolize', sans-serif;
-    background-color: rgba(0, 1, 5, 0.788);
-    color: rgb(96, 155, 194);
-    border-style: inset;
-    border-color: rgba(0,16,76, 0.863);
-    border-width: 5px;
-    border-radius: 10px 0px 10px 0px;
+    background-color: rgba(0, 1, 5, 0.685);
+    color: rgb(33, 108, 158);
+    border-style: ridge;
+    border-color: rgba(4, 16, 59, 0.863);
+    border-width: 2px;
+    border-radius: 13px 0px 2px 0px;
     width: 97%;
     text-align: center;
-    padding: 5px;
+    padding: 6px 5px;
     margin:1px;
     /**display: inline-block;*/
     font-size: 18px;
@@ -90,7 +90,7 @@ table, tr{
   }
   table button:hover{
     background-color: rgba(0, 1, 7, 0.91);
-    text-shadow: 0 0 2.5px rgb(100, 157, 196);
+    text-shadow: 0 0 1.5px rgb(33, 108, 158);
   }
 
 
