@@ -77,7 +77,8 @@ table, tr{
     border-color: rgba(0,16,76, 0.863);
     border-width: 5px;
     border-radius: 10px 0px 10px 0px;
-    width: 98%;
+    margin: 10px;
+    width: 99%;
     text-align: center;
     padding: 5px;
     /**display: inline-block;*/
