@@ -52,9 +52,11 @@ h2{
   letter-spacing: 4px;
 }
 
-
+table{
+  width:70%;
+}
 table, tr{
-    border: 1px solid rgba(31, 59, 94, 0.356);
+    border: 1px solid rgba(17, 48, 87, 0.192);
     border-collapse: collapse;
     text-align-last: center;
     
@@ -71,16 +73,16 @@ table, tr{
 
   table button{
     font-family: 'Electrolize', sans-serif;
-    background-color: rgba(0, 1, 7, 0.788);
+    background-color: rgba(0, 1, 5, 0.788);
     color: rgb(96, 155, 194);
     border-style: inset;
     border-color: rgba(0,16,76, 0.863);
     border-width: 5px;
     border-radius: 10px 0px 10px 0px;
-    margin: 10px;
-    width: 99%;
+    width: 97%;
     text-align: center;
     padding: 5px;
+    margin:1px;
     /**display: inline-block;*/
     font-size: 18px;
     letter-spacing: 2px;
