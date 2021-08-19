@@ -1,7 +1,6 @@
 html{
   
-  filter:  brightness(2);
-  filter: saturate(-5);
+  filter:  brightness(200%) saturate(102%);
 }
 body{
     margin: 0;
@@ -35,6 +34,8 @@ body{
     height: 100vh;
     
     width: 100vw;
+    
+   filter: blur(0.1px);
   }
   .container{
     pointer-events: all;
@@ -116,11 +117,14 @@ body{
     }
     
     #pray {
+      filter:brightness(80%);
       height: 95px;
       opacity: 0.08;
           -webkit-animation: rotation 20s infinite reverse;
   }
   #pray2{
+    
+   filter:brightness(86%) saturate(130%);
     position: absolute;
     height: 150px;
       opacity: 0.5;

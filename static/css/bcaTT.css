@@ -1,7 +1,6 @@
 html{
   
-  filter:  brightness(2);
-  filter: saturate(-5);
+  filter:  brightness(200%) saturate(105%);
 }
 body{
   margin: 0;
@@ -35,6 +34,7 @@ body{
 #particles-js{
   border-color: #000000;
   height: 100vh;
+  filter: blur(0.1px);
 }
 .container{
   pointer-events: all;
@@ -115,11 +115,13 @@ table, tr{
   }
   
   #pray {
+    filter:brightness(80%);
     height: 116px;
     opacity: 0.08;
 		-webkit-animation: rotation 20s infinite reverse;
 }
 #pray2{
+  filter:brightness(86%) saturate(130%);
   position: absolute;
   height: 180px;
     opacity: 0.5;
