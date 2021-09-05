@@ -2,7 +2,7 @@ from flask import Flask, render_template, request,redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://uzepcuu7wekuzewr:9jFHZfTc6NQOTTNgavz@bmlahsmxh4xsgqozvi8a-mysql.services.clever-cloud.com:20870/bmlahsmxh4xsgqozvi8a"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://u0sf5f7crjrg2nie:oU40voJTtXLurF9fxDGW@bmneo6iuwyphevtyy2a7-mysql.services.clever-cloud.com:3306/bmneo6iuwyphevtyy2a7"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 

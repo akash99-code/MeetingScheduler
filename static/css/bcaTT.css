@@ -93,6 +93,7 @@ table, tr{
     /**display: inline-block;*/
     font-size: 18px;
     letter-spacing: 2px;
+    transition: all 0.1s;
     
   }
   table button:hover{
