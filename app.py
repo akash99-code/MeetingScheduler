@@ -25,9 +25,9 @@ def home():
     try:
         TTdata = TTdb.query.all()
     except:
-        return redirect('/edit')
+        return redirect('/')
     if(not TTdata):
-        return redirect('/edit')
+        return redirect('/')
     return render_template('index.html', TTdata=TTdata)
 
 @app.route('/edit', methods=['GET'])
