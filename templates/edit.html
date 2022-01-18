@@ -32,7 +32,8 @@
             </tr>
           {% for hour in TTdata %}
           <tr>
-            {% set hr = ['8:00','9:30','link','10:30','link','11:30','link','1:30','link','2:30','link','3:30','link','pray'] %}
+            {% set hr = ['8:00','link','9:30','link','10:30','link','11:30','link','1:30','link','2:30','link','3:30','link','pray'] %}
+
             <th>{{hr[loop.index-1]}}</th>
             <td>
                 <form action='/update/{{hour.sno}}/mon', method="POST">
